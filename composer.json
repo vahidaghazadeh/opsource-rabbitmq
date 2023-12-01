@@ -2,6 +2,7 @@
     "name": "opsource/rabbitmq",
     "version": "1.0.1",
     "description": "RabbitMQ client laravel",
+    "license": "MIT",
     "authors": [
         {
             "name": "vahid aghazade",
@@ -9,10 +10,12 @@
             "role": "Developer"
         }
     ],
+    "keywords": ["amqp","laravel","rabbitmq"],
+    "minimum-stability": "dev",
     "require": {
-        "php": "^8.0",
+        "php": ">=8.0",
         "ext-json": "*",
-        "illuminate/support": "^9.0|^10.0",
+        "illuminate/support": "=>^9.0",
         "php-amqplib/php-amqplib": "v3.2"
     },
     "require-dev": {
@@ -29,6 +32,14 @@
     "autoload-dev": {
         "psr-4": {
             "Opsource\\Rabbitmq\\Test\\": "tests"
+        }
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Opsource\\Rabbitmq\\RabbitmqServiceProvider"
+            ]
         }
     }
 }
