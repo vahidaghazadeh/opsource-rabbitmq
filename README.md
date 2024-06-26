@@ -320,10 +320,10 @@ protected $commands = [
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Kunnu\RabbitMQ\RabbitMQQueue;
-use Kunnu\RabbitMQ\RabbitMQExchange;
-use Kunnu\RabbitMQ\RabbitMQIncomingMessage;
-use Kunnu\RabbitMQ\RabbitMQGenericMessageConsumer;
+use Opsource\RabbitMQ\RabbitMQQueue;
+use Opsource\RabbitMQ\RabbitMQExchange;
+use Opsource\RabbitMQ\RabbitMQIncomingMessage;
+use Opsource\RabbitMQ\RabbitMQGenericMessageConsumer;
 
 class MyRabbitConsumer extends Command
 {
