@@ -1,6 +1,6 @@
 {
     "name": "opsource/rabbitmq",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "RabbitMQ client laravel",
     "license": "MIT",
     "authors": [
@@ -14,7 +14,7 @@
     "require": {
         "php": "^8.0",
         "ext-json": "*",
-        "illuminate/support": "^9.0|^10.0",
+        "illuminate/support": "^9.0|^10.0|11.*",
         "php-amqplib/php-amqplib": "^v3.6.0"
     },
     "require-dev": {
