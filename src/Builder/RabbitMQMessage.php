@@ -36,9 +36,7 @@ class RabbitMQMessage
      */
     public function __construct(string $stream, array $config = [])
     {
-        $this
-            ->setStream($stream)
-            ->setConfig($config);
+        $this->setStream($stream)->setConfig($config);
     }
 
     /**
