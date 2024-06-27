@@ -1,6 +1,5 @@
 {
     "name": "opsource/rabbitmq",
-    "version": "1.0.3",
     "type": "library",
     "description": "RabbitMQ client laravel",
     "license": "MIT",
