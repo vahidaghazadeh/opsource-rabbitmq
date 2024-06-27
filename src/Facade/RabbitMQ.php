@@ -1,6 +1,6 @@
 <?php
 
-namespace Opsource\Rabbitmq;
+namespace Opsource\Rabbitmq\Facade;
 
 use Illuminate\Support\Facades\Facade;
 

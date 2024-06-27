@@ -1,8 +1,9 @@
 <?php
 
-namespace Opsource\Rabbitmq;
+namespace Opsource\Rabbitmq\Builder;
 
 use Closure;
+use Opsource\Rabbitmq\Contracts\RabbitMQMessageConsumer;
 
 class RabbitMQGenericMessageConsumer extends RabbitMQMessageConsumer
 {

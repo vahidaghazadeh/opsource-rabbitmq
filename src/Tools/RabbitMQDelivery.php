@@ -1,8 +1,9 @@
 <?php
 
-namespace Opsource\Rabbitmq;
+namespace Opsource\Rabbitmq\Tools;
 
 use Illuminate\Support\Collection;
+use Opsource\Rabbitmq\Exception\RabbitMQException;
 use PhpAmqpLib\Channel\AMQPChannel;
 
 class RabbitMQDelivery

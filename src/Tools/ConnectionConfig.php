@@ -1,6 +1,6 @@
 <?php
 
-namespace Opsource\Rabbitmq;
+namespace Opsource\Rabbitmq\Tools;
 
 use Illuminate\Support\Collection;
 

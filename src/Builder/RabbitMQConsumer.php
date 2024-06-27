@@ -1,10 +1,13 @@
 <?php
 
-namespace Opsource\Rabbitmq;
+namespace Opsource\Rabbitmq\Builder;
 
-use PhpAmqpLib\Wire\AMQPTable;
 use Illuminate\Support\Collection;
+use Opsource\Rabbitmq\Contracts\RabbitMQMessageConsumer;
+use Opsource\Rabbitmq\Tools\ConsumeConfig;
+use Opsource\Rabbitmq\Tools\RabbitMQDelivery;
 use PhpAmqpLib\Message\AMQPMessage;
+use PhpAmqpLib\Wire\AMQPTable;
 
 class RabbitMQConsumer
 {

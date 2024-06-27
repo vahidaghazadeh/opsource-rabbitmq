@@ -1,8 +1,11 @@
 <?php
 
-namespace Opsource\Rabbitmq;
+namespace Opsource\Rabbitmq\Builder;
 
 use Illuminate\Support\Collection;
+use Opsource\Rabbitmq\Contracts\RabbitMQMessageConsumer;
+use Opsource\Rabbitmq\Exception\RabbitMQException;
+use Opsource\Rabbitmq\Tools\RabbitMQDelivery;
 use PhpAmqpLib\Message\AMQPMessage;
 
 class RabbitMQIncomingMessage
@@ -68,7 +71,7 @@ class RabbitMQIncomingMessage
     }
 
     /**
-     * @return null|\Opsource\Rabbitmq\RabbitMQExchange|null
+     * @return null|\Opsource\Rabbitmq\Builder\RabbitMQExchange|null
      */
     public function getExchange(): ?RabbitMQExchange
     {
@@ -76,7 +79,7 @@ class RabbitMQIncomingMessage
     }
 
     /**
-     * @param \Opsource\Rabbitmq\RabbitMQExchange|null $exchange
+     * @param \Opsource\Rabbitmq\Builder\RabbitMQExchange|null $exchange
      *
      * @return self
      */
@@ -88,7 +91,7 @@ class RabbitMQIncomingMessage
     }
 
     /**
-     * @return null|\Opsource\Rabbitmq\RabbitMQQueue|null
+     * @return null|\Opsource\Rabbitmq\Builder\RabbitMQQueue|null
      */
     public function getQueue(): ?RabbitMQQueue
     {
@@ -96,7 +99,7 @@ class RabbitMQIncomingMessage
     }
 
     /**
-     * @param \Opsource\Rabbitmq\RabbitMQQueue|null $queue
+     * @param \Opsource\Rabbitmq\Builder\RabbitMQQueue|null $queue
      *
      * @return self
      */
@@ -108,7 +111,7 @@ class RabbitMQIncomingMessage
     }
 
     /**
-     * @return \Opsource\Rabbitmq\RabbitMQDelivery|null
+     * @return \Opsource\Rabbitmq\Tools\RabbitMQDelivery|null
      */
     public function getDelivery(): ?RabbitMQDelivery
     {
@@ -116,7 +119,7 @@ class RabbitMQIncomingMessage
     }
 
     /**
-     * @param \Opsource\Rabbitmq\RabbitMQDelivery|null $deliveryInfo
+     * @param \Opsource\Rabbitmq\Tools\RabbitMQDelivery|null $deliveryInfo
      *
      * @return \Opsource\Rabbitmq\RabbitMQIncomingMessage
      */

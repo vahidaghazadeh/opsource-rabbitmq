@@ -1,11 +1,13 @@
 <?php
 
-namespace Opsource\Rabbitmq;
+namespace Opsource\Rabbitmq\Builder;
 
-use PhpAmqpLib\Wire\AMQPTable;
 use Illuminate\Support\Collection;
+use Opsource\Rabbitmq\Exception\RabbitMQException;
+use Opsource\Rabbitmq\Tools\PublishConfig;
 use PhpAmqpLib\Channel\AMQPChannel;
 use PhpAmqpLib\Message\AMQPMessage;
+use PhpAmqpLib\Wire\AMQPTable;
 
 class RabbitMQPublisher
 {

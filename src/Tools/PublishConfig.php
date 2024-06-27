@@ -1,10 +1,10 @@
 <?php
 
-namespace Opsource\Rabbitmq;
+namespace Opsource\Rabbitmq\Tools;
 
 use Illuminate\Support\Collection;
 
-class ConsumeConfig extends Collection
+class PublishConfig extends Collection
 {
     /**
      * Connection Configuration.
@@ -14,7 +14,7 @@ class ConsumeConfig extends Collection
     protected ?ConnectionConfig $connectionConfig;
 
     /**
-     * Create a new ConsumeConfig instance.
+     * Create a new PublishConfig instance.
      *
      * @param array $config
      * @param ConnectionConfig|null $connectionConfig

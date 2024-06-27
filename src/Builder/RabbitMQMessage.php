@@ -1,6 +1,6 @@
 <?php
 
-namespace Opsource\Rabbitmq;
+namespace Opsource\Rabbitmq\Builder;
 
 use Illuminate\Support\Collection;
 use PhpAmqpLib\Message\AMQPMessage;

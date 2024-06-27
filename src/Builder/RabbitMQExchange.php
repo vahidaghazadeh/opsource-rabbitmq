@@ -1,22 +1,41 @@
 <?php
 
-namespace Opsource\Rabbitmq;
+namespace Opsource\Rabbitmq\Builder;
 
 use Illuminate\Support\Collection;
 
-class RabbitMQQueue
+class RabbitMQExchange
 {
+    /**
+     * Exchange name.
+     *
+     * @var string
+     */
     protected string $name;
 
+    /**
+     * Exchange config.
+     *
+     * @var Collection
+     */
     protected Collection $config;
 
+    /**
+     * Create a new RabbitMQ Exchange instance.
+     *
+     * @param string $name
+     * @param array $config
+     */
     public function __construct(string $name, array $config = [])
     {
-        $this->setName($name);
-        $this->setConfig($config);
+        $this
+            ->setName($name)
+            ->setConfig($config);
     }
 
     /**
+     * Get Exchange name.
+     *
      * @return string
      */
     public function getName(): string
@@ -25,9 +44,11 @@ class RabbitMQQueue
     }
 
     /**
+     * Set Exchange name.
+     *
      * @param string $name
      *
-     * @return \Opsource\Rabbitmq\RabbitMQQueue
+     * @return RabbitMQExchange
      */
     public function setName(string $name): self
     {
@@ -37,6 +58,8 @@ class RabbitMQQueue
     }
 
     /**
+     * Get Exchange Config.
+     *
      * @return Collection
      */
     public function getConfig(): Collection
@@ -45,9 +68,11 @@ class RabbitMQQueue
     }
 
     /**
+     * Set Exchange config.
+     *
      * @param array $config
      *
-     * @return \Opsource\Rabbitmq\RabbitMQQueue
+     * @return RabbitMQExchange
      */
     public function setConfig(array $config): self
     {

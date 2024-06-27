@@ -1,6 +1,6 @@
 <?php
 
-namespace Opsource\Rabbitmq;
+namespace Opsource\Rabbitmq\Exception;
 
 
 class RabbitMQException extends \Exception

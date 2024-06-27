@@ -1,7 +1,8 @@
 <?php
 namespace Opsource\Rabbitmq;
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Support\ServiceProvider;
+use Opsource\Rabbitmq\Builder\RabbitMQManager;
 
 class RabbitmqServiceProvider extends ServiceProvider
 {

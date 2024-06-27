@@ -1,8 +1,11 @@
 <?php
 
-namespace Opsource\Rabbitmq;
+namespace Opsource\Rabbitmq\Contracts;
 
 use Illuminate\Support\Collection;
+use Opsource\Rabbitmq\Builder\RabbitMQExchange;
+use Opsource\Rabbitmq\Builder\RabbitMQIncomingMessage;
+use Opsource\Rabbitmq\Builder\RabbitMQQueue;
 
 abstract class RabbitMQMessageConsumer
 {
@@ -49,7 +52,7 @@ abstract class RabbitMQMessageConsumer
     }
 
     /**
-     * @return null|\Opsource\Rabbitmq\RabbitMQExchange|null
+     * @return null|\Opsource\Rabbitmq\Builder\RabbitMQExchange|null
      */
     public function getExchange(): ?RabbitMQExchange
     {
@@ -57,7 +60,7 @@ abstract class RabbitMQMessageConsumer
     }
 
     /**
-     * @param \Opsource\Rabbitmq\RabbitMQExchange|null $exchange
+     * @param \Opsource\Rabbitmq\Builder\RabbitMQExchange|null $exchange
      *
      * @return self
      */
@@ -69,7 +72,7 @@ abstract class RabbitMQMessageConsumer
     }
 
     /**
-     * @return null|\Opsource\Rabbitmq\RabbitMQQueue|null
+     * @return null|\Opsource\Rabbitmq\Builder\RabbitMQQueue|null
      */
     public function getQueue(): ?RabbitMQQueue
     {
@@ -77,7 +80,7 @@ abstract class RabbitMQMessageConsumer
     }
 
     /**
-     * @param \Opsource\Rabbitmq\RabbitMQQueue|null $queue
+     * @param \Opsource\Rabbitmq\Builder\RabbitMQQueue|null $queue
      *
      * @return self
      */

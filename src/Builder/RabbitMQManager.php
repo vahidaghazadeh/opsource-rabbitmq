@@ -1,13 +1,14 @@
 <?php
 
-namespace Opsource\Rabbitmq;
+namespace Opsource\Rabbitmq\Builder;
 
 use Illuminate\Config\Repository;
-use Illuminate\Support\Collection;
-use PhpAmqpLib\Channel\AMQPChannel;
-use PhpAmqpLib\Connection\AMQPSSLConnection;
 use Illuminate\Contracts\Container\Container;
+use Illuminate\Support\Collection;
+use Opsource\Rabbitmq\Tools\ConnectionConfig;
+use PhpAmqpLib\Channel\AMQPChannel;
 use PhpAmqpLib\Connection\AbstractConnection;
+use PhpAmqpLib\Connection\AMQPSSLConnection;
 
 class RabbitMQManager
 {
